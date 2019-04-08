@@ -1,11 +1,14 @@
 <template>
   <div class="menu">
-    Menu
+    <MenuItem v-for="i in 8" :key="i" />
   </div>
 </template>
 
 <script>
+import MenuItem from '@/components/MenuItem'
+
 export default {
+  components: { MenuItem },
   data () {
     return {
       page: this.$route.params.page
