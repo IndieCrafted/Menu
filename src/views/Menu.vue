@@ -24,13 +24,20 @@ export default {
   },
   methods: {
     async getBeerList () {
-      const id = ~~this.$route.params.page
-      const res = await api.getScreenInfo({
-        id
-      })
-      const result = res.data.data
-      this.beerList = result.beerList
-      console.log(this.beerList)
+      try {
+        const id = ~~this.$route.params.page
+        const res = await api.getScreenInfo({
+          id
+        })
+        const result = res.data.data
+        if (result.length) {
+          this.beerList = result[0].beerList
+          localStorage.beerList = JSON.stringify(result[0].beerList)
+        }
+      } catch (e) {
+        console.log(e)
+        this.beerList = localStorage.beerList ? JSON.parse(localStorage.beerList) : []
+      }
     }
   }
 }
