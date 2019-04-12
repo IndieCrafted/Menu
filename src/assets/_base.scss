@@ -1,3 +1,5 @@
+@import './font.scss';
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +12,8 @@ html, body {
 
 #app {
   height: 100%;
-  font-family: 'Avenir', 'Monaco', Helvetica, 'PingFang SC', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+  font-family: 'Avenir', 'Monaco', Helvetica, 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+  // font-family: 'Avenir', 'Monaco', Helvetica, 'PingFang SC', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
