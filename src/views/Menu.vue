@@ -1,17 +1,36 @@
 <template>
   <div class="menu">
-    <MenuItem v-for="i in 8" :key="i" />
+    <MenuItem
+      v-for="beer in beerList"
+      :key="beer.id"
+      :data="beer"
+    />
   </div>
 </template>
 
 <script>
 import MenuItem from '@/components/MenuItem'
+import * as api from '@/api/menu'
 
 export default {
   components: { MenuItem },
   data () {
     return {
-      page: this.$route.params.page
+      beerList: []
+    }
+  },
+  mounted () {
+    this.getBeerList()
+  },
+  methods: {
+    async getBeerList () {
+      const id = ~~this.$route.params.page
+      const res = await api.getScreenInfo({
+        id
+      })
+      const result = res.data.data
+      this.beerList = result.beerList
+      console.log(this.beerList)
     }
   }
 }
