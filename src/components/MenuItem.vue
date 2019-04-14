@@ -15,8 +15,8 @@
     </div>
     <div class="center">
       <div class="info">
-        <p>风格：{{ data.style }}</p>
-        <p>酒精度：{{ data.vol }}%</p>
+        <p>风格: {{ data.style }}</p>
+        <p>酒精度: {{ data.vol }}%</p>
       </div>
     </div>
     <div class="right">
@@ -48,7 +48,7 @@ export default {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 .4rem;
+  padding: 0 .2rem;
   &:nth-child(2n) {
     background: #171717;
   }
@@ -60,20 +60,20 @@ export default {
     .number {
       color: #fafafa;
       font-size: .4rem;
-      margin-right: .4rem;
+      margin-right: .2rem;
       text-align: center;
       min-width: .5rem;
     }
     .basic {
       line-height: 1;
       .brand {
-        font-size: .7rem;
+        font-size: .6rem;
         color: #fafafa;
-        margin-right: .2rem;
+        margin-right: .1rem;
       }
       .name {
         font-size: .7rem;
-        margin-right: .2rem;
+        margin-right: .1rem;
         font-family: 'CuHei';
       }
       .origin {
@@ -106,7 +106,7 @@ export default {
       font-size: 0;
       .price {
         font-size: .7rem;
-        margin-right: .2rem;
+        margin-right: .1rem;
         font-family: 'CuHei';
       }
       .spec {
