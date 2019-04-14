@@ -16,7 +16,7 @@
     <div class="center">
       <div class="info">
         <p>风格：{{ data.style }}</p>
-        <p>酒精度：{{ data.vol }}</p>
+        <p>酒精度：{{ data.vol }}%</p>
       </div>
     </div>
     <div class="right">
@@ -41,16 +41,16 @@ export default {
 
 <style lang="scss" scoped>
 .menu-item {
-  background: #7b899b;
+  background: #434343;
   color: #fff;
   flex: 1;
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 0.4rem;
+  padding: 0 .4rem;
   &:nth-child(2n) {
-    background: #26303d;
+    background: #171717;
   }
   .left {
     min-width: 60%;
@@ -58,32 +58,35 @@ export default {
     display: flex;
     align-items: center;
     .number {
-      color: #ddd;
-      font-size: 0.4rem;
+      color: #fafafa;
+      font-size: .4rem;
       margin-right: .4rem;
+      text-align: center;
+      min-width: .5rem;
     }
     .basic {
       line-height: 1;
       .brand {
-        font-size: 0.7rem;
-        color: #ddd;
-        margin-right: 0.2rem;
+        font-size: .7rem;
+        color: #fafafa;
+        margin-right: .2rem;
       }
       .name {
-        font-size: 0.7rem;
-        margin-right: 0.2rem;
+        font-size: .7rem;
+        margin-right: .2rem;
         font-family: 'CuHei';
       }
       .origin {
-        font-size: 0.35rem;
-        color: #ddd;
+        font-size: .35rem;
+        color: #fafafa;
       }
     }
     .en-name {
       line-height: 1;
       margin-top: .1rem;
-      font-size: 0.35rem;
+      font-size: .35rem;
       font-family: 'En';
+      color: #fafafa;
     }
   }
   .center {
@@ -91,8 +94,8 @@ export default {
     .info {
       font-size: 0;
       p {
-        font-size: 0.35rem;
-        color: #ddd;
+        font-size: .35rem;
+        color: #fafafa;
       }
     }
   }
@@ -102,13 +105,13 @@ export default {
     .sku {
       font-size: 0;
       .price {
-        font-size: 0.7rem;
-        margin-right: 0.2rem;
+        font-size: .7rem;
+        margin-right: .2rem;
         font-family: 'CuHei';
       }
       .spec {
-        font-size: 0.35rem;
-        color: #ddd;
+        font-size: .35rem;
+        color: #fafafa;
       }
     }
   }
