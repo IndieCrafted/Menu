@@ -1,13 +1,15 @@
 <template>
   <div class="home">
     <h1 class="title">INDIE CRAFTED</h1>
-    <div
-      class="menu-link"
-      v-for="screen in screenList"
-      :key="screen.id"
-      @click="goToMenu(screen.id)"
-    >
-      {{ screen.name }}
+    <div class="menu-wrap">
+      <div
+        class="menu-link"
+        v-for="screen in screenList"
+        :key="screen.id"
+        @click="goToMenu(screen.id)"
+      >
+        {{ screen.name }}
+      </div>
     </div>
   </div>
 </template>
@@ -58,12 +60,18 @@ export default {
     font-size: 1rem;
     font-family: 'En';
   }
-  .menu-link {
-    font-size: .7rem;
-    border: .05rem solid #fff;
-    border-radius: 6%;
-    padding: .2rem .5rem;
-    margin-top: .5rem;
+  .menu-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .menu-link {
+      flex: 0;
+      font-size: .7rem;
+      border: .05rem solid #fff;
+      border-radius: 6%;
+      padding: .2rem .5rem;
+      margin-top: .5rem;
+    }
   }
 }
 </style>

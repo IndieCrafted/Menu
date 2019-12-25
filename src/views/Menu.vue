@@ -31,7 +31,7 @@ export default {
         })
         const result = res.data.data
         if (result.length) {
-          this.beerList = result[0].beerList
+          this.beerList = result[0].beerList.sort((a, b) => ~~a.number - ~~b.number)
           localStorage.beerList = JSON.stringify(result[0].beerList)
         }
       } catch (e) {
@@ -48,5 +48,9 @@ export default {
   height: 100%;
   display: flex;
   flex-direction: column;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* justify-content: space-around; */
+  align-items: center;
 }
 </style>
